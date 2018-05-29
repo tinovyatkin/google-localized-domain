@@ -37,7 +37,7 @@
     "@destinationstransfers/fetch": "2.1.0",
     "eslint": "4.9.0",
     "eslint-plugin-import": "2.8.0",
-    "eslint-plugin-node": "5.2.0",
+    "eslint-plugin-node": "6.0.1",
     "jest": "21.2.1",
     "remark-cli": "4.0.0",
     "remark-preset-lint-consistent": "2.0.1",
