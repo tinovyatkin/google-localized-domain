@@ -35,7 +35,7 @@
   "devDependencies": {
     "@destinationstransfers/eslint-config": "3.3.0",
     "@destinationstransfers/fetch": "2.1.0",
-    "eslint": "5.7.0",
+    "eslint": "5.8.0",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-node": "7.0.1",
     "jest": "23.6.0",
