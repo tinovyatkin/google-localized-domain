@@ -33,7 +33,7 @@
     "node": ">=6"
   },
   "devDependencies": {
-    "@destinationstransfers/eslint-config": "3.12.0",
+    "@destinationstransfers/eslint-config": "4.0.0",
     "@destinationstransfers/fetch": "2.1.0",
     "eslint": "5.12.1",
     "eslint-plugin-import": "2.15.0",
