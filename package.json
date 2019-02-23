@@ -24,7 +24,7 @@
   "license": "MIT",
   "files": [
     "index.js",
-    "data"
+    "util/fetchGoogleDomains.js"
   ],
   "bugs": {
     "url": "https://github.com/destinationstransfers/google-localized-domain/issues"
