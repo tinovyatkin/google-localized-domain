@@ -4,7 +4,8 @@
   "description": "Returns Google localized domain (like google.co.uk) querying by country code (like 'GB') or language code (like 'en-GB')",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "node --expose-gc node_modules/jest/bin/jest --detectOpenHandles --detectLeaks --notify --logHeapUsage",
+    "postinstall": "node util/fetchGoogleDomains"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,8 @@
   "devDependencies": {
     "@destinationstransfers/eslint-config": "6.3.0",
     "eslint": "5.14.1",
-    "jest": "24.1.0"
+    "jest": "24.1.0",
+    "weak": "^1.0.1"
   },
   "jest": {
     "collectCoverage": true,
