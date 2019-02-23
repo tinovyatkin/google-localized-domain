@@ -1,6 +1,6 @@
 {
   "name": "@destinationstransfers/google-localized-domain",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Returns Google localized domain (like google.co.uk) querying by country code (like 'GB') or language code (like 'en-GB')",
   "main": "index.js",
   "scripts": {
@@ -30,57 +30,37 @@
   },
   "homepage": "https://github.com/destinationstransfers/google-localized-domain#readme",
   "engines": {
-    "node": ">=6"
+    "node": ">=10"
   },
   "devDependencies": {
     "@destinationstransfers/eslint-config": "6.3.0",
-    "@destinationstransfers/fetch": "2.1.0",
     "eslint": "5.14.1",
-    "eslint-plugin-import": "2.16.0",
-    "eslint-plugin-node": "7.0.1",
-    "jest": "24.1.0",
-    "remark-cli": "5.0.0",
-    "remark-preset-lint-consistent": "2.0.2",
-    "remark-preset-lint-recommended": "3.0.2"
-  },
-  "remarkConfig": {
-    "presets": [
-      "lint-recommended",
-      "lint-consistent"
-    ]
+    "jest": "24.1.0"
   },
   "jest": {
     "collectCoverage": true,
     "testEnvironment": "node",
     "verbose": true,
-    "bail": true
+    "bail": true,
+    "coverageReporters": [
+      "text",
+      "json",
+      "html",
+      "cobertura"
+    ]
   },
   "eslintConfig": {
-    "plugins": [
-      "node"
-    ],
     "extends": [
-      "@destinationstransfers",
-      "plugin:node/recommended"
+      "@destinationstransfers"
     ],
     "env": {
       "node": true
     },
     "parserOptions": {
       "sourceType": "script"
-    },
-    "rules": {
-      "prefer-object-spread/prefer-object-spread": "off",
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true,
-          "trailingComma": "es5"
-        }
-      ]
     }
   },
   "dependencies": {
-    "world-countries": "^2.0.0"
+    "world-countries": "2.1.0"
   }
 }
