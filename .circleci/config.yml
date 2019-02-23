@@ -1,20 +1,53 @@
 # Javascript Node CircleCI 2.0 configuration file
 #
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+# Check https://circleci.com/blog/publishing-npm-packages-using-circleci-2-0/
 #
-version: 2
-jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:latest
+version: 2.1
 
+executors:
+  latest-node:
+    docker:
+      - image: circleci/node:latest
     working_directory: ~/repo
 
+jobs:
+  build:
+    executor: latest-node
     steps:
       - checkout
 
       - run: npm ci
 
       # run tests!
-      - run: npm test
+      - run:
+          name: Run tests
+          command: npm test
+
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+
+  deploy:
+    executor: latest-node
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+      - run:
+          name: Publish package
+          command: npm publish
+
+workflows:
+  version: 2
+  test-deploy:
+    jobs:
+      - build
+
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
