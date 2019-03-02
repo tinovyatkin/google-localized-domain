@@ -1,6 +1,6 @@
 {
   "name": "@destinationstransfers/google-localized-domain",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Returns Google localized domain (like google.co.uk) querying by country code (like 'GB') or language code (like 'en-GB')",
   "main": "index.js",
   "scripts": {
@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@destinationstransfers/eslint-config": "6.4.0",
-    "eslint": "5.14.1",
+    "eslint": "5.15.0",
     "jest": "24.1.0",
     "weak": "1.0.1"
   },
