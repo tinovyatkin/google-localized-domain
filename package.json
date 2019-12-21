@@ -1,6 +1,6 @@
 {
   "name": "@destinationstransfers/google-localized-domain",
-  "version": "2.0.21",
+  "version": "2.0.22",
   "description": "Returns Google localized domain (like google.co.uk) querying by country code (like 'GB') or language code (like 'en-GB')",
   "main": "index.js",
   "scripts": {
@@ -63,6 +63,6 @@
     }
   },
   "dependencies": {
-    "world-countries": "2.1.0"
+    "world-countries": "3.0.0"
   }
 }
